@@ -8,7 +8,7 @@
 // factorial(5);  // 120
 var factorial = function(n) {
   if (n <= 1) {
-    return n < 0 ? null : 1;
+    return (n < 0) ? null : 1;
   } else {
     return n * factorial(n-1);
   }
@@ -18,11 +18,7 @@ var factorial = function(n) {
 // Example:  sum([1, 2, 3, 4, 5, 6]);  // 21
 var sum = function(array) {
   var slicedArray = array.slice();
-  if (slicedArray.length === 0) {
-    return 0;
-  } else {
-    return slicedArray.shift() + sum(slicedArray);
-  }
+  return (slicedArray.length === 0) ? 0 : (slicedArray.shift() + sum(slicedArray));
 };
 
 // 3. Sum all numbers in an array containing nested arrays.
