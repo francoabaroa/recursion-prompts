@@ -9,9 +9,8 @@
 var factorial = function(n) {
   if (n <= 1) {
     return (n < 0) ? null : 1;
-  } else {
-    return n * factorial(n-1);
   }
+  return n * factorial(n-1);
 };
 
 // 2. Compute the sum of an array of integers.
