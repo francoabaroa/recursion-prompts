@@ -23,29 +23,33 @@ var sum = function(array) {
 // 3. Sum all numbers in an array containing nested arrays.
 // Example: arraySum([1,[2,3],[[4]],5]); // 15
 var arraySum = function(array) {
-  // var slicedArray = array.slice();
-  // if (slicedArray.length === 0) {
-  //   return 0;
-  // } else {
-  //   if ()
-  // }
-  return 1;
+// var slicedArray = array.slice();
+
 };
+
 
 // 4. Check if a number is even.
 var isEven = function(n) {
-  // if (!Number.isInteger(n)) {
-  //   n = -n;
-  // }
-  // if (n === 0) {
-  //   return true;
-  // } else if (n === 1) {
-  //   return false;
-  // } else {
-  //   return isEven(n-1);
-  // }
+  if (n < 0) {
+    n = Math.abs(n);
+  }
+
+  if (n === 0) {
+    return true;
+  }
+  if (n === 1) {
+    return false;
+  }
+
+  if (n === 2) {
+    return true;
+  } else {
+    return isEven(n-2);
+  }
+
 };
 
+console.log(isEven(-8));
 // 5. Sum all integers below a given integer.
 // sumBelow(10); // 45
 // sumBelow(7); // 21
